@@ -24,7 +24,9 @@ class _TodoListPageState extends State<TodoListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("To-do List"),
+        title: const Text(
+          "To-do List"
+          ),
         backgroundColor: Colors.brown,
       ),
 
@@ -59,15 +61,29 @@ class _TodoListPageState extends State<TodoListPage> {
         backgroundColor: Colors.brown,
         onPressed: () async {
           showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  title: Text('Add Todo'),
-                  content: TextField(
-                    controller: _controller,
+            
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                title: Text('Add To-do-list'),
+                content: TextField(
+                  controller: _controller,
+                  cursorColor: Colors.black,
+                  style: TextStyle(
+                    color: Colors.black,
+                    ), // Change text color
+                  decoration: InputDecoration(
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black), // Change line color
+                    ),
+                     // Change cursor color
                   ),
+                ),
                   actions: [
                     ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.brown),
+                      ),
                       child: Text('Add'),
                       onPressed: () {
                         if (_controller.text.isNotEmpty) {
