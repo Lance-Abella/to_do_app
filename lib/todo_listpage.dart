@@ -25,7 +25,7 @@ class _TodoListPageState extends State<TodoListPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("To-do List"),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.brown,
       ),
 
       body: ValueListenableBuilder(
@@ -54,6 +54,7 @@ class _TodoListPageState extends State<TodoListPage> {
           );
         },
       ),
+
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.brown,
         onPressed: () async {
