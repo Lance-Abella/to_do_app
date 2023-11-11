@@ -22,7 +22,9 @@ class Home extends StatelessWidget {
               return TodoListPage(snapshot.data ?? []);
             }
             else{
-              return CircularProgressIndicator();
+              return Center(
+                child: CircularProgressIndicator()
+                );
             }
           },
       ),

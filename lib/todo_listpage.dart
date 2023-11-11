@@ -25,7 +25,7 @@ class _TodoListPageState extends State<TodoListPage> {
     return Scaffold(
   appBar: AppBar(
     title: Text(
-      "To-do List",
+      "To-do-List",
       style: TextStyle(
         color: Colors.white,
         fontSize: 24,
